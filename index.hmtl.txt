@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achadinhos de Montão 💚</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e6f5ea;
+      color: #2f5f3d;
+    }
+    header {
+      background-color: #34c759;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 1.8rem;
+    }
+    .container {
+      padding: 20px;
+    }
+    .oferta {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .oferta h3 {
+      margin-top: 0;
+      color: #34c759;
+    }
+    .oferta a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #34c759;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .filtros {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .filtros input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .whatsapp-btn {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+    }
+    .whatsapp-btn a {
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+  <script>
+    function filtrarOfertas() {
+      const termo = document.getElementById('busca').value.toLowerCase();
+      const ofertas = document.getElementsByClassName('oferta');
+      for (let i = 0; i < ofertas.length; i++) {
+        const texto = ofertas[i].innerText.toLowerCase();
+        ofertas[i].style.display = texto.includes(termo) ? 'block' : 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    💚 Achadinhos de Montão 💚<br>
+    Suas ofertas favoritas em um só lugar!
+  </header>
+
+  <div class="container">
+    <div class="filtros">
+      <input type="text" id="busca" onkeyup="filtrarOfertas()" placeholder="Buscar por produto ou categoria...">
+    </div>
+
+    <div class="whatsapp-btn">
+      <a href="https://wa.me/seulinkdegrupo" target="_blank">💬 Entrar no Grupo VIP do WhatsApp</a>
+    </div>
+
+    <div class="oferta">
+      <h3>👟 Tênis Nike com 40% OFF</h3>
+      <p>De R$299,00 por apenas R$179,90! Aproveite enquanto durar o estoque!</p>
+      <a href="#">Ver Oferta</a>
+    </div>
+
+    <div class="oferta">
+      <h3>🍼 Kit Mamadeira Philips Avent</h3>
+      <p>Compre o kit completo com frete grátis e cupom de 15% extra.</p>
+      <a href="#">Ver Oferta</a>
+    </div>
+
+    <div class="oferta">
+      <h3>📱 Fone Bluetooth com até 50% de desconto</h3>
+      <p>Ideal para treinos e chamadas! Promoção por tempo limitado.</p>
+      <a href="#">Ver Oferta</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Achadinhos de Montão. Todas as ofertas são por tempo limitado e sujeitas a alteração sem aviso prévio.
+  </footer>
+</body>
+</html>
